@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'styled-components';
-import { GlobalStyles } from '../src/styles/global-styles';
+import { GlobalStyles } from '../src/styles/globalStyles';
 import { theme } from '../src/styles/theme';
 
 export const parameters = {

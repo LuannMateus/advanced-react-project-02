@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> Should render a footer 1`] = `
+.c0 {
+  width: 100%;
+  text-align: center;
+}
+
+.c0 a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+.c2 {
+  font-size: 2.4rem;
+  padding: 0 20px;
+}
+
+.c1 {
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+<div>
+  <footer
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <h1>
+          Hello!
+        </h1>
+      </div>
+    </div>
+  </footer>
+</div>
+`;
