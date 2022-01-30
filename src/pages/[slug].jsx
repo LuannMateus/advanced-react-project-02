@@ -44,5 +44,5 @@ export const getStaticProps = async (ctx) => {
 };
 
 Page.propTypes = {
-  data: P.object,
+  data: P.array,
 };
