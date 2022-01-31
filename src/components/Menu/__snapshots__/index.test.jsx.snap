@@ -121,6 +121,7 @@ exports[`<Menu /> Should render Logo and Main Menu Nav 1`] = `
 }
 
 .c8 > img {
+  width: 100%;
   height: 3rem;
 }
 
