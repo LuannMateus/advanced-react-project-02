@@ -1,11 +1,15 @@
-import styled, { css } from 'styled-components';
+import styled, { css, DefaultTheme } from 'styled-components';
 
-const containerBackgroundActivate = (theme) => css`
+const containerBackgroundActivate = (theme: DefaultTheme) => css`
   background: ${theme.colors.primaryColor};
   color: ${theme.colors.white};
 `;
 
-export const Container = styled.div`
+type BackgroundProps = {
+  background?: boolean;
+};
+
+export const Container = styled.div<BackgroundProps>`
   ${({ theme, background }) => css`
     width: 100%;
 
