@@ -1,8 +1,12 @@
 import styled, { css } from 'styled-components';
 import { Title } from '../Heading/styles';
 
-export const Container = styled.div`
-  ${({ theme, background }) => css`
+type BackgroundProps = {
+  background?: boolean;
+};
+
+export const Container = styled.div<BackgroundProps>`
+  ${({ theme }) => css`
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;
@@ -33,11 +37,11 @@ export const TextContainer = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  ${({ theme }) => css``}
+  ${() => css``}
 `;
 
 export const Image = styled.img`
-  ${({ theme }) => css`
+  ${() => css`
     width: 100%;
   `};
 `;

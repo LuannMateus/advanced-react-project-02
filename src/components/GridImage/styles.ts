@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { Title as HeadingContainer } from '../Heading/styles';
 import { Container as TextComponent } from '../TextComponent/styles';
 
 export const Container = styled.div`
@@ -8,19 +7,19 @@ export const Container = styled.div`
 
     padding: 0 ${theme.spacings.large};
 
-    ${TextComponent} {
+    > ${TextComponent} {
       padding: 0;
       margin-bottom: ${theme.spacings.xhuge};
-      margin-top: ${theme.spacings.large};
     }
   `}
 `;
 
 export const Grid = styled.div`
   ${({ theme }) => css`
-    counter-reset: grid-counter;
+    width: 100%;
+
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: ${theme.spacings.large};
 
     @media ${theme.media.lteMedium} {
@@ -30,20 +29,20 @@ export const Grid = styled.div`
 `;
 
 export const GridElement = styled.div`
-  ${({ theme }) => css`
-    > ${HeadingContainer} {
-      position: relative;
-      margin-left: 5rem;
-    }
+  ${() => css`
+    width: 100%;
 
-    ${HeadingContainer}::before {
-      counter-increment: grid-counter;
-      content: counter(grid-counter);
-      position: absolute;
-      font-size: 7rem;
-      top: -3rem;
-      left: -5rem;
-      transform: rotate(5deg);
+    overflow: hidden;
+  `}
+`;
+
+export const Image = styled.img`
+  ${() => css`
+    width: 100%;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.2) rotate(10deg);
     }
   `}
 `;
