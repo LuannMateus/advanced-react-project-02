@@ -1,12 +1,8 @@
 import * as Styled from './styles';
-import { MenuLink } from '../MenuLink';
+import { MenuLink, MenuLinkProps } from '../MenuLink';
 
 export type NavLinksProps = {
-  links: Array<{
-    children: string;
-    link: string;
-    newTab?: boolean;
-  }>;
+  links?: MenuLinkProps[];
 };
 
 export const NavLinks = ({ links = [] }: NavLinksProps) => {

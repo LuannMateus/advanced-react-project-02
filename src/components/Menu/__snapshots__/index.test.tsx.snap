@@ -20,6 +20,7 @@ exports[`<Menu /> Should render Logo and Main Menu Nav 1`] = `
   left: 0;
   right: 0;
   width: 100%;
+  border-bottom: #939799;
   background: #FFFFFF;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
