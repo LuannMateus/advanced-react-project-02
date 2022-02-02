@@ -1,18 +1,23 @@
+import { GetServerSideProps } from 'next';
 import { Home } from '../templates/Home';
-import { mapData } from '../api/mapData';
-import P from 'prop-types';
 import { loadPages } from '../api/loadPages';
 
-export default function Index({ data = null }) {
+export type IndexProps = {
+  data: [];
+};
+
+export default function Index({ data = null }: IndexProps) {
   return <Home data={data} />;
 }
 
-export const getServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps<IndexProps> = async () => {
   let data = null;
 
   try {
     data = await loadPages('landing-page');
-  } catch (e) {}
+  } catch (e) {
+    //
+  }
 
   if (!data || !data.length) {
     return {
@@ -25,8 +30,4 @@ export const getServerSideProps = async () => {
       data,
     },
   };
-};
-
-Index.propTypes = {
-  data: P.array,
 };
