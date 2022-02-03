@@ -1,5 +1,5 @@
 import * as Styled from './styles';
-import { NavLinks, NavLinksProps } from '../NavLinks';
+import { NavLinks } from '../NavLinks';
 import { LogoLink, LogoLinkProps } from '../LogoLink';
 import { useState } from 'react';
 import { SectionContainer } from '../SectionContainer';
