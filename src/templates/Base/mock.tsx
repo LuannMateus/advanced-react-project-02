@@ -1,6 +1,7 @@
 import linksMock from '../../components/NavLinks/mock';
 import gridMock from '../../components/GridText/mock';
 import { GridText } from '../../components/GridText';
+import { BaseProps } from '.';
 
 export default {
   children: (
@@ -18,4 +19,4 @@ export default {
     link: '#',
   },
   footerHtml: '<p>Teste de footer</p>',
-};
+} as BaseProps;
