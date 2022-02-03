@@ -3,6 +3,11 @@ import { SectionBackground } from '../SectionBackground';
 import { TextComponent } from '../TextComponent';
 import * as Styled from './styles';
 
+export type GridImageElementProps = {
+  altText: string;
+  srcImg: string;
+};
+
 export type GridImageProps = {
   background?: boolean;
   title: string;
@@ -12,6 +17,7 @@ export type GridImageProps = {
     srcImg: string;
   }>;
   sectionId?: string;
+  component?: string;
 };
 
 export const GridImage = ({

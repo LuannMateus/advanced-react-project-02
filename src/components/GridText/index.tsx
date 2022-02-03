@@ -12,6 +12,12 @@ export type GridTextProps = {
     description: string;
   }>;
   sectionId?: string;
+  component?: string;
+};
+
+export type GridTextElementProps = {
+  title: string;
+  description: string;
 };
 
 export const GridText = ({
