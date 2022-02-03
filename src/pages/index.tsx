@@ -1,16 +1,12 @@
 import { GetServerSideProps } from 'next';
-import { Home } from '../templates/Home';
+import { Home, HomeProps } from '../templates/Home';
 import { loadPages } from '../api/loadPages';
 
-export type IndexProps = {
-  data: [];
-};
-
-export default function Index({ data = null }: IndexProps) {
+export default function Index({ data = null }: HomeProps) {
   return <Home data={data} />;
 }
 
-export const getServerSideProps: GetServerSideProps<IndexProps> = async () => {
+export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
   let data = null;
 
   try {
